@@ -27,7 +27,7 @@ void load(openrac::Mod& mod){
         if(s.loads!=loads){
             loads=s.loads;
             base_line=s.level>=0 ? qol::explore(g->level_name(s.level)) : std::string();
-            if(!base_line.empty()) g->play_notice(base_line);
+            if(!base_line.empty()){ g->play_notice(base_line); timer=240; }
         }
         if(!temporary.empty()){ g->play_notice(temporary); temporary.clear(); }
         else if(timer>0 && --timer==0) g->play_notice(persistent ? base_line : "");

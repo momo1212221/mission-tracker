@@ -22,7 +22,7 @@
       "key": "persistent_objective",
       "name": "Restore planet objective after progress notices",
       "type": "bool",
-      "default": true
+      "default": false
     }
   ]
 }
